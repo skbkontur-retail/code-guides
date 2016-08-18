@@ -1,0 +1,24 @@
+{
+  "name": "skbkontur-code-guides",
+  "version": "0.1.0",
+  "description": "SKBKontur Retail project javaScript code guides",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "gitbook install",
+    "clean": "rimraf _book",
+    "build": "npm run prepare && gitbook build",
+    "watch": "npm run prepare && gitbook serve",
+    "publish": "npm run clean && npm run build && cd _book && git init && git commit --allow-empty -m \"update book\" && git checkout -b gh-pages && git add . && git commit -am \"update book\" && git push git@github.com:skbkontur-retail/code-guides.git gh-pages --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skbkontur-retail/code-guides.git"
+  },
+  "author": "tihonove",
+  "license": "ISC",
+  "homepage": "https://skbkontur-retail.github.io/code-guides/",
+  "dependencies": {
+    "gitbook-cli": "^2.3.0",
+    "rimraf": "^2.5.4"
+  }
+}
